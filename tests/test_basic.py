@@ -1,12 +1,9 @@
 """Basic tests for the Æther package."""
 
-import os
-import pytest
-
 from aether.__version__ import __version__
-from aether.utils.file_utils import get_file_extension, detect_file_language
-from aether.utils.text_utils import normalize_whitespace
+from aether.utils.file_utils import detect_file_language, get_file_extension
 from aether.utils.hash_utils import md5_hash
+from aether.utils.text_utils import normalize_whitespace
 
 
 def test_version():

@@ -61,7 +61,8 @@ def memory_usage(func: F) -> F:
 
         tracemalloc.stop()
         logger.debug(
-            f"{func.__name__} used {current / 1024:.2f} KB current, {peak / 1024:.2f} KB peak"
+            f"{func.__name__} used {current / 1024:.2f} KB current,"
+            + "{peak / 1024:.2f} KB peak"
         )
 
         return result

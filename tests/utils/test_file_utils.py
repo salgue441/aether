@@ -1,16 +1,13 @@
 """Tests for the file_utils module."""
 
 import os
-from pathlib import Path
-
-import pytest
 
 from aether.utils.file_utils import (
+    detect_file_language,
     find_files,
+    get_file_extension,
     read_file,
     write_file,
-    get_file_extension,
-    detect_file_language,
 )
 
 
@@ -20,7 +17,7 @@ def test_find_files(sample_directory):
 
     # Debug - print directory contents
     print("\nDirectory contents:")
-    for root, dirs, files in os.walk(sample_directory):
+    for root, _dirs, files in os.walk(sample_directory):
         for file in files:
             print(os.path.join(root, file))
 
@@ -30,7 +27,7 @@ def test_find_files(sample_directory):
 
     # Count how many Python files we have
     py_file_count = 0
-    for root, dirs, files in os.walk(sample_directory):
+    for _root, _dirs, files in os.walk(sample_directory):
         for file in files:
             if file.endswith(".py"):
                 py_file_count += 1

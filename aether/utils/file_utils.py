@@ -4,8 +4,7 @@ File utility functions for the Æther project
 
 import fnmatch
 import os
-import pathlib
-from typing import List, Optional, Set, Tuple
+from typing import List, Optional
 
 
 def find_files(
@@ -20,13 +19,15 @@ def find_files(
         directory: The directory to search in.
         include_patterns: List of glob patterns to include (e.g., ["*.py", "*.java"]).
             If None, all files will be included.
-        exclude_patterns: List of glob patterns to exclude (e.g., ["test_*", "*_test.py"]).
+        exclude_patterns: List of glob patterns to exclude
+            (e.g., ["test_*", "*_test.py"]).
             If None, no files will be excluded.
         recursive: Whether to search recursively in subdirectories.
 
     Returns:
         A list of file paths that match the criteria.
     """
+
     include_patterns = include_patterns or ["*"]
     exclude_patterns = exclude_patterns or []
 

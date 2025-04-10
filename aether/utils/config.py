@@ -49,11 +49,12 @@ def load_config(config_path: str) -> Dict[str, Any]:
             return config["tool"]["aether"]
 
         return config
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Config file not found: {config_path}")
+
+    except FileNotFoundError as err:
+        raise FileNotFoundError(f"Config file not found: {config_path}") from err
 
     except tomli.TOMLDecodeError as e:
-        raise tomli.TOMLDecodeError(f"Invalid TOML file: {e}", "", 0)
+        raise tomli.TOMLDecodeError(f"Invalid TOML file: {e}", "", 0) from e
 
 
 def save_config(config: Dict[str, Any], config_path: str) -> None:

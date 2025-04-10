@@ -3,7 +3,7 @@ Text processing utilities for the Æther project
 """
 
 import re
-from typing import List, Optional, Pattern
+from typing import List
 
 
 def normalize_whitespace(text: str) -> str:
@@ -32,7 +32,8 @@ def remove_comments(code: str, language: str) -> str:
 
     Args:
       code (str): The code to process.
-      language (str): The programming language of the code. Supported languages are 'python', 'cpp', and 'java'.
+      language (str): The programming language of the code.
+        Supported languages are 'python', 'cpp', and 'java'.
 
     Returns:
       str: The code without comments.
@@ -55,6 +56,8 @@ def remove_comments(code: str, language: str) -> str:
     }
 
     patterns_to_use = patterns.get(language.lower(), patterns["cpp"])
+    result = code
+
     for pattern, replacement, *flags in patterns_to_use:
         flag = flags[0] if flags else 0
         result = re.sub(pattern, replacement, result, flags=flag)
@@ -68,7 +71,8 @@ def extract_identifiers(code: str, language: str) -> List[str]:
 
     Args:
       code (str): The code to process.
-      language (str): The programming language of the code. Supported languages are 'python', 'cpp', and 'java'.
+      language (str): The programming language of the code.
+        Supported languages are 'python', 'cpp', and 'java'.
 
     Returns:
       List[str]: A list of identifiers found in the code.
@@ -93,7 +97,8 @@ def normalize_identifiers(code: str, language: str) -> str:
 
     Args:
       code (str): The code to process.
-      language (str): The programming language of the code. Supported languages are 'python', 'cpp', and 'java'.
+      language (str): The programming language of the code.
+        Supported languages are 'python', 'cpp', and 'java'.
 
     Returns:
       str: The code with identifiers replaced by generic placeholders.
@@ -117,7 +122,8 @@ def get_language_keywords(language: str) -> List[str]:
     Get keywords for a specific programming language
 
     Args:
-      language (str): The programming language to get keywords for. Supported languages are 'python', 'cpp', and 'java'.
+      language (str): The programming language to get keywords for.
+        Supported languages are 'python', 'cpp', and 'java'.
 
     Returns:
       List[str]: A list of keywords for the specified programming language.
@@ -317,7 +323,8 @@ def tokenize_code(code: str) -> List[str]:
     Split code into tokens.
 
     This is a simple tokenizer that splits on whitespace and punctuation.
-    For more advanced tokenization, language-specific tokenizers should be used.
+    For more advanced tokenization, language-specific tokenizers
+    should be used.
 
     Args:
         code (str): The code to tokenize.
