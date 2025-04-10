@@ -6,7 +6,6 @@ interface for Æther, allowing users to perform code similarity
 detection from the terminal.
 """
 
-import os
 import sys
 from typing import Optional
 
@@ -111,7 +110,7 @@ def compare(
             sys.exit(1)
 
         if not quiet:
-            click.echo(f"Comparing code between:")
+            click.echo("Comparing code between:")
             click.echo(f"  Source: {source_path}")
             click.echo(f"  Target: {target_path}")
             click.echo(f"  Threshold: {threshold}")
@@ -125,7 +124,7 @@ def compare(
             sys.exit(1)
 
         if not quiet:
-            click.echo(f"Comparing files:")
+            click.echo("Comparing files:")
             click.echo(f"  File 1: {file1}")
             click.echo(f"  File 2: {file2}")
             click.echo(f"  Threshold: {threshold}")
