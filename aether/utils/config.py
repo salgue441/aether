@@ -46,9 +46,9 @@ def load_config(config_path: str) -> Dict[str, Any]:
             config = tomli.load(file)
 
         if "tool" in config and "aether" in config["tool"]:
-            return config["tool"]["aether"]
+            return dict(config["tool"]["aether"])
 
-        return config
+        return dict(config)
 
     except FileNotFoundError as err:
         raise FileNotFoundError(f"Config file not found: {config_path}") from err

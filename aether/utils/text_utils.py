@@ -58,8 +58,14 @@ def remove_comments(code: str, language: str) -> str:
     patterns_to_use = patterns.get(language.lower(), patterns["cpp"])
     result = code
 
-    for pattern, replacement, *flags in patterns_to_use:
-        flag = flags[0] if flags else 0
+    for pattern_tuple in patterns_to_use:
+        pattern = pattern_tuple[0]
+        replacement = pattern_tuple[1]
+
+        flag: int = 0
+        if len(pattern_tuple) > 2:
+            flag = int(pattern_tuple[2])
+
         result = re.sub(pattern, replacement, result, flags=flag)
 
     return result

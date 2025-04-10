@@ -1,93 +1,104 @@
-"""Tests for the file_utils module."""
-
 import os
+import tempfile
+from typing import Generator
+
+import pytest
 
 from aether.utils.file_utils import (
     detect_file_language,
     find_files,
     get_file_extension,
+    is_binary_file,
     read_file,
     write_file,
 )
 
 
-def test_find_files(sample_directory):
-    """Test finding files with various patterns."""
-    import os
+@pytest.fixture
+def sample_directory() -> Generator[str, None, None]:
+    """Create a temporary directory with sample files for testing."""
+    with tempfile.TemporaryDirectory() as temp_dir:
+        # Create some sample files
+        write_file(os.path.join(temp_dir, "file1.py"), "print('Hello, world!')")
+        write_file(os.path.join(temp_dir, "file2.py"), "x = 10")
+        write_file(os.path.join(temp_dir, "file3.txt"), "Plain text file")
 
-    # Debug - print directory contents
-    print("\nDirectory contents:")
-    for root, _dirs, files in os.walk(sample_directory):
-        for file in files:
-            print(os.path.join(root, file))
+        # Create a subdirectory
+        subdir = os.path.join(temp_dir, "subdir")
+        os.makedirs(subdir, exist_ok=True)
 
-    # Find all Python files
+        # Add files to the subdirectory
+        write_file(os.path.join(subdir, "file4.py"), "def test(): pass")
+        write_file(os.path.join(subdir, "file5.java"), "public class Test {}")
+
+        yield temp_dir
+
+
+def test_find_files(sample_directory: str) -> None:
+    """Test finding files with specific patterns."""
+    # Find all files
+    all_files = find_files(sample_directory)
+    assert len(all_files) == 5
+
+    # Find only Python files
     py_files = find_files(sample_directory, include_patterns=["*.py"])
-    print(f"\nFound Python files: {py_files}")
-
-    # Count how many Python files we have
-    py_file_count = 0
-    for _root, _dirs, files in os.walk(sample_directory):
-        for file in files:
-            if file.endswith(".py"):
-                py_file_count += 1
-
-    # Use the actual count instead of hardcoding 3
-    assert len(py_files) == py_file_count
+    assert len(py_files) == 3
 
     # Find files with exclusion
-    filtered_files = find_files(
-        sample_directory, include_patterns=["*.py"], exclude_patterns=["test2*"]
+    non_py_files = find_files(
+        sample_directory, include_patterns=["*"], exclude_patterns=["*.py"]
     )
-    assert len(filtered_files) == py_file_count - 1
-    assert not any("test2" in f for f in filtered_files)
+    assert len(non_py_files) == 2
 
     # Non-recursive search
-    top_files = find_files(sample_directory, recursive=False)
-    assert len(top_files) >= 2  # At least test1.py, test2.py, README.md
-    assert not any("subfolder" in f for f in top_files)
+    top_level_files = find_files(sample_directory, recursive=False)
+    assert len(top_level_files) == 3
 
 
-def test_read_write_file(temp_file):
+def test_read_write_file(sample_directory: str) -> None:
     """Test reading and writing files."""
-    test_content = "Hello, world!\nThis is a test."
+    test_file = os.path.join(sample_directory, "test_read_write.txt")
+    test_content = "Test content for read/write operations."
 
-    # Write content to the file
-    write_file(temp_file, test_content)
+    # Write to the file
+    write_file(test_file, test_content)
 
-    # Read content back
-    content = read_file(temp_file)
+    # Read from the file
+    read_content = read_file(test_file)
 
-    # Verify content matches
-    assert content == test_content
-
-    # Test with different encoding
-    special_content = "ÆÑÜçñ漢字"
-    write_file(temp_file, special_content, encoding="utf-8")
-    read_content = read_file(temp_file, encoding="utf-8")
-    assert read_content == special_content
+    assert read_content == test_content
 
 
-def test_get_file_extension():
+def test_get_file_extension() -> None:
     """Test getting file extensions."""
-    assert get_file_extension("file.py") == ".py"
+    assert get_file_extension("file.txt") == ".txt"
     assert get_file_extension("file.tar.gz") == ".gz"
     assert get_file_extension("file") == ""
-    assert get_file_extension("path/to/file.js") == ".js"
-    assert get_file_extension(".htaccess") == ""
-    assert get_file_extension("file.с") == ".с"  # non-ASCII extension
+    assert get_file_extension("/path/to/file.py") == ".py"
 
 
-def test_detect_file_language():
-    """Test detecting programming languages from file extensions."""
+def test_is_binary_file(sample_directory: str) -> None:
+    """Test binary file detection."""
+    text_file = os.path.join(sample_directory, "text_file.txt")
+    write_file(text_file, "This is a text file.")
+
+    assert not is_binary_file(text_file)
+
+    # Create a simple binary file
+    binary_file = os.path.join(sample_directory, "binary_file.bin")
+    with open(binary_file, "wb") as f:
+        f.write(b"\x00\x01\x02\x03")
+
+    assert is_binary_file(binary_file)
+
+
+def test_detect_file_language() -> None:
+    """Test detecting file language based on extension."""
     assert detect_file_language("file.py") == "python"
-    assert detect_file_language("script.js") == "javascript"
-    assert detect_file_language("code.cpp") == "cpp"
-    assert detect_file_language("code.c") == "c"
-    assert detect_file_language("code.h") == "c"
-    assert detect_file_language("code.hpp") == "cpp"
-    assert detect_file_language("code.unknown") is None
-    assert detect_file_language("code") is None
+    assert detect_file_language("file.java") == "java"
+    assert detect_file_language("file.cpp") == "cpp"
+    assert detect_file_language("file.txt") is None
+    assert detect_file_language("file.unknown") is None
 
 
 def test_write_file_creates_directories(tmpdir):

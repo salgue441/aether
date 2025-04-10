@@ -9,8 +9,8 @@ from typing import List, Optional
 
 def find_files(
     directory: str,
-    include_patterns: List[str] = None,
-    exclude_patterns: List[str] = None,
+    include_patterns: Optional[List[str]] = None,
+    exclude_patterns: Optional[List[str]] = None,
     recursive: bool = True,
 ) -> List[str]:
     """Find files in a directory that match the given patterns.
@@ -27,7 +27,6 @@ def find_files(
     Returns:
         A list of file paths that match the criteria.
     """
-
     include_patterns = include_patterns or ["*"]
     exclude_patterns = exclude_patterns or []
 

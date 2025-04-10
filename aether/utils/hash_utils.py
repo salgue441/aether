@@ -111,7 +111,7 @@ def winnowing_fingerprint(text: str, k: int = 5, w: int = 4) -> List[Tuple[int, 
 
     kgrams = [text[i : i + k] for i in range(len(text) - k + 1)]
     hashes = [zlib.adler32(kgram.encode()) for kgram in kgrams]
-    fingerprints = []
+    fingerprints: List[Tuple[int, int]] = []
 
     for i in range(len(hashes) - w + 1):
         window = hashes[i : i + w]

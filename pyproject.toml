@@ -106,8 +106,6 @@ testpaths = ["tests"]
 [tool.ruff]
 target-version = "py310"
 line-length = 88
-select = ["E", "F", "B", "I", "W", "C90"]
-ignore = ["E203"]
 exclude = [
     ".git",
     ".eggs",
@@ -118,7 +116,11 @@ exclude = [
     "env",
 ]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "W", "C90"]
+ignore = ["E203"]
+
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
 [tool.aether]

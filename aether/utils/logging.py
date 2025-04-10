@@ -5,7 +5,7 @@ Logging utilities for the Æther project
 import logging
 import os
 import sys
-from typing import Optional
+from typing import Any, Optional
 
 # Custom log level for verbose output
 VERBOSE = 15
@@ -17,7 +17,7 @@ class AetherLogger(logging.Logger):
     Custom logger for the Æther project with additional log levels.
     """
 
-    def verbose(self, msg, *args, **kwargs):
+    def verbose(self, msg: str, *args: Any, **kwargs: Any) -> None:
         """
         Log a message with VERBOSE level.
 

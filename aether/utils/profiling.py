@@ -285,7 +285,10 @@ class PerformanceStats:
         return "\n".join(lines)
 
     def log_report(self) -> None:
-        """Log the performance report."""
+        """
+        Log the performance report.
+        """
+
         logger.info(self.report())
 
 
