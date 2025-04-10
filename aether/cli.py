@@ -12,7 +12,7 @@ from typing import Optional
 
 import click
 
-from aether.aether.__version__ import __version__
+from aether.__version__ import __version__
 
 
 @click.group()

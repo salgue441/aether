@@ -6,7 +6,7 @@ infringements across codebases by employing Machine Learning, Compiler
 techniques, and Quantitative Methods.
 """
 
-from aether.aether.__version__ import __version__
+from aether.__version__ import __version__
 
 # Import main components for easier access
 
