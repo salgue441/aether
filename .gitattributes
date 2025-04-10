@@ -1,0 +1,48 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Explicitly declare text files to be normalized
+*.py text diff=python
+*.pyx text diff=python
+*.c text diff=c
+*.h text diff=c
+*.cpp text diff=cpp
+*.hpp text diff=cpp
+*.md text diff=markdown
+*.rst text
+*.txt text
+*.yml text
+*.yaml text
+*.json text
+*.toml text
+*.ini text
+*.cfg text
+
+# Windows scripts should have CRLF endings
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Scripts should use LF
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tar binary
+*.whl binary
+*.pyc binary
+*.so binary
+*.dll binary
+*.pyd binary
+
+# Exclude files from GitHub stats
+*.ipynb linguist-documentation
+docs/* linguist-documentation
