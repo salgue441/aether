@@ -124,14 +124,28 @@ def is_binary_file(file_path: str) -> bool:
     if not os.path.isfile(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
 
+    chunk_size = 8192
     try:
-        with open(file_path, "r", encoding="utf-8") as file:
-            file.read(1024)
+        with open(file_path, "rb") as file:
+            chunk = file.read(chunk_size)
+
+        if b"\x00" in chunk:
+            return True
+
+        try:
+            chunk.decode("utf-8")
+
+        except UnicodeDecodeError:
+            return True
+
+        printable_chars = sum(32 <= byte <= 126 for byte in chunk)
+        if len(chunk) > 0 and printable_chars / len(chunk) < 0.8:
+            return True
 
         return False
 
-    except UnicodeDecodeError:
-        return True
+    except Exception:
+        return False
 
 
 def detect_file_language(file_path: str) -> Optional[str]:
