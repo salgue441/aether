@@ -7,21 +7,22 @@ from typing import List, Optional, Pattern
 
 
 def normalize_whitespace(text: str) -> str:
-    """
-    Normalize whitespace in the given text by removing leading and trailing
-    whitespace and replacing multiple spaces with a single space.
+    """Normalize whitespace in text.
 
     Args:
-        text (str): The text to normalize.
+        text: The input text.
 
     Returns:
-        str: The normalized text.
+        Text with consistent whitespace:
+        - Convert tabs to spaces
+        - Trim trailing whitespace
+        - Ensure single newlines
     """
 
     text = text.replace("\t", "    ")
     text = text.replace("\r\n", "\n").replace("\r", "\n")
 
-    lines = [line.strip() for line in text.split("\n")]
+    lines = [line.rstrip() for line in text.split("\n")]
     return "\n".join(lines)
 
 

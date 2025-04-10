@@ -76,13 +76,11 @@ def main():
 
 @pytest.fixture
 def sample_directory() -> Generator[str, None, None]:
-    """
-    Create a temporary directory with sample files for testing.
+    """Create a temporary directory with sample files for testing.
 
     Yields:
         Path to a temporary directory that will be deleted after the test.
     """
-    
     temp_dir = tempfile.mkdtemp()
 
     # Create a few files in the directory
@@ -101,7 +99,6 @@ def sample_directory() -> Generator[str, None, None]:
 
     yield temp_dir
 
-    # Clean up after test
     import shutil
 
     shutil.rmtree(temp_dir)

@@ -12,56 +12,45 @@ def find_files(
     directory: str,
     include_patterns: List[str] = None,
     exclude_patterns: List[str] = None,
-    recursive: bool = False,
+    recursive: bool = True,
 ) -> List[str]:
-    """
-    Find files in a directory that match the given patterns.
+    """Find files in a directory that match the given patterns.
 
     Args:
-        directory (str): The directory to search in.
-        include_patterns (List[str]): A list of glob patterns to include.
-        exclude_patterns (List[str]): A list of glob patterns to exclude.
-        recursive (bool): Whether to search recursively.
+        directory: The directory to search in.
+        include_patterns: List of glob patterns to include (e.g., ["*.py", "*.java"]).
+            If None, all files will be included.
+        exclude_patterns: List of glob patterns to exclude (e.g., ["test_*", "*_test.py"]).
+            If None, no files will be excluded.
+        recursive: Whether to search recursively in subdirectories.
 
     Returns:
-      A list of file paths that match the criteria
+        A list of file paths that match the criteria.
     """
-
     include_patterns = include_patterns or ["*"]
     exclude_patterns = exclude_patterns or []
+
     matching_files = []
 
-    if recursive:
-        for root, _, files in os.walk(directory):
-            for file in files:
-                file_path = os.path.join(root, file)
+    for root, dirs, files in os.walk(directory):
+        if not recursive and root != directory:
+            continue
 
-                included = any(
-                    fnmatch.fnmatch(file, pattern) for pattern in include_patterns
-                )
+        for file in files:
+            file_path = os.path.join(root, file)
+            included = any(
+                fnmatch.fnmatch(file, pattern) for pattern in include_patterns
+            )
 
-                excluded = any(
-                    fnmatch.fnmatch(file, pattern) for pattern in exclude_patterns
-                )
+            excluded = any(
+                fnmatch.fnmatch(file, pattern) for pattern in exclude_patterns
+            )
 
-                if included and not excluded:
-                    matching_files.append(file_path)
+            if included and not excluded:
+                matching_files.append(file_path)
 
-    else:
-        for file in os.listdir(directory):
-            file_path = os.path.join(directory, file)
-
-            if os.path.isfile(file_path):
-                included = any(
-                    fnmatch.fnmatch(file, pattern) for pattern in include_patterns
-                )
-
-                excluded = any(
-                    fnmatch.fnmatch(file, pattern) for pattern in exclude_patterns
-                )
-
-                if included and not excluded:
-                    matching_files.append(file_path)
+        if not recursive:
+            dirs.clear()
 
     return matching_files
 
