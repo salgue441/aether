@@ -1,4 +1,6 @@
-"""Test configuration and fixtures for Æther tests."""
+"""
+Test configuration and fixtures for Æther tests.
+"""
 
 import os
 import tempfile
@@ -9,29 +11,30 @@ import pytest
 
 @pytest.fixture
 def temp_file() -> Generator[str, None, None]:
-    """Create a temporary file for testing.
+    """
+    Create a temporary file for testing.
 
     Yields:
         Path to a temporary file that will be deleted after the test.
     """
+
     with tempfile.NamedTemporaryFile(delete=False) as tmp:
         tmp_path = tmp.name
 
     yield tmp_path
-
-    # Clean up after test
     if os.path.exists(tmp_path):
         os.unlink(tmp_path)
 
 
 @pytest.fixture
 def sample_code_files() -> Generator[Tuple[str, str], None, None]:
-    """Create temporary files with sample code for testing.
+    """
+    Create temporary files with sample code for testing.
 
     Yields:
         Tuple of (file1_path, file2_path) containing sample code files.
     """
-    # Sample Python code with slight differences for comparison
+
     code1 = """
 def factorial(n):
     # Calculate factorial
@@ -64,20 +67,22 @@ def main():
 
     yield (file1_path, file2_path)
 
-    # Clean up after test
     if os.path.exists(file1_path):
         os.unlink(file1_path)
+
     if os.path.exists(file2_path):
         os.unlink(file2_path)
 
 
 @pytest.fixture
 def sample_directory() -> Generator[str, None, None]:
-    """Create a temporary directory with sample files for testing.
+    """
+    Create a temporary directory with sample files for testing.
 
     Yields:
         Path to a temporary directory that will be deleted after the test.
     """
+    
     temp_dir = tempfile.mkdtemp()
 
     # Create a few files in the directory
