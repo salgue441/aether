@@ -192,3 +192,7 @@ models/
 results/
 reports/
 .aether/
+
+# Datasets
+research/datasets/*
+research/datasets
