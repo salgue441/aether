@@ -1,13 +1,8 @@
 import os
 import shutil
 
-<<<<<<< HEAD
-files_path = "./research/datasets/conplag"  # Path to the directory containing the files
-destination_path = "./research/datasets/conplag_preprocessed"
-=======
 files_path = "./datasets/conplag"  # Path to the directory containing the files
 destination_path = "./datasets/conplag_preprocesed"
->>>>>>> 3f17119ba6cc398c8495f4aeb08db5f5eacf12ae
 
 os.makedirs(destination_path, exist_ok=True)
 
