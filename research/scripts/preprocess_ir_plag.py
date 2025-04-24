@@ -4,8 +4,8 @@ import shutil  # Import shutil for file copying
 
 data = pd.DataFrame(columns=["id1", "id2", "plagio", "caseId"])
 
-DATASET_PATH = "datasets/ir_plag"
-TARGET_PATH = "datasets/ir_plag_preprocessed"
+DATASET_PATH = "../datasets/ir_plag"
+TARGET_PATH = "../datasets/ir_plag_preprocessed"
 
 ORIGINAL_DIR_NAME = "original"
 PLAGIARIZED_DIR_NAME = "plagiarized"
@@ -43,12 +43,12 @@ for dir_name in os.listdir(DATASET_PATH):
     os.makedirs(os.path.dirname(new_file_path), exist_ok=True)
     shutil.copy(original_file_path, new_file_path)
 
-    plagiarized_levels_dirs = os.listdir(
-        os.path.join(dir_path, PLAGIARIZED_DIR_NAME))
+    plagiarized_levels_dirs = os.listdir(os.path.join(dir_path, PLAGIARIZED_DIR_NAME))
     plagiarized_file_paths = []
     for plagiarized_level_dir in plagiarized_levels_dirs:
         plagiarized_dir = os.path.join(
-            dir_path, PLAGIARIZED_DIR_NAME, plagiarized_level_dir)
+            dir_path, PLAGIARIZED_DIR_NAME, plagiarized_level_dir
+        )
         if not os.path.isdir(plagiarized_dir):
             print(f"Skipping {plagiarized_dir} as it is not a directory")
             continue
@@ -56,7 +56,8 @@ for dir_name in os.listdir(DATASET_PATH):
 
         for plagiarized_dir in plagiarized_dirs:
             plagiarized_files = os.path.join(
-                dir_path, PLAGIARIZED_DIR_NAME, plagiarized_level_dir, plagiarized_dir)
+                dir_path, PLAGIARIZED_DIR_NAME, plagiarized_level_dir, plagiarized_dir
+            )
             if not os.path.isdir(plagiarized_files):
                 print(f"Skipping {plagiarized_files} as it is not a directory")
                 continue
@@ -64,16 +65,15 @@ for dir_name in os.listdir(DATASET_PATH):
             files = os.listdir(plagiarized_files)
             if len(files) > 1:
                 print(
-                    f"More than one plagiarized file in {plagiarized_files}. Expected only one")
+                    f"More than one plagiarized file in {plagiarized_files}. Expected only one"
+                )
                 print(files)
                 continue
 
             plagiarized_file = os.listdir(plagiarized_files)[0]
-            plagiarized_file_path = os.path.join(
-                plagiarized_files, plagiarized_file)
+            plagiarized_file_path = os.path.join(plagiarized_files, plagiarized_file)
             if not os.path.isfile(plagiarized_file_path):
-                print(
-                    f"Plagiarized file {plagiarized_file_path} does not exist")
+                print(f"Plagiarized file {plagiarized_file_path} does not exist")
                 continue
             plagiarized_file_paths.append(plagiarized_file_path)
 
@@ -90,41 +90,39 @@ for dir_name in os.listdir(DATASET_PATH):
         shutil.copy(plagiarized_file_path, new_file_path)
 
         # Append the data to the DataFrame
-        data = data._append({
-            "id1": original_file_id,
-            "id2": curr_id,
-            "plagio": 1,
-            "caseId": case_id
-        }, ignore_index=True)
+        data = data._append(
+            {"id1": original_file_id, "id2": curr_id, "plagio": 1, "caseId": case_id},
+            ignore_index=True,
+        )
 
-    non_plagiarized_dirs = os.listdir(
-        os.path.join(dir_path, NON_PLAGIARIZED_DIR_NAME))
+    non_plagiarized_dirs = os.listdir(os.path.join(dir_path, NON_PLAGIARIZED_DIR_NAME))
     non_plagiarized_file_paths = []
     for non_plagiarized_dir in non_plagiarized_dirs:
         non_plagiarized_files = os.path.join(
-            dir_path, NON_PLAGIARIZED_DIR_NAME, non_plagiarized_dir)
+            dir_path, NON_PLAGIARIZED_DIR_NAME, non_plagiarized_dir
+        )
         if not os.path.isdir(non_plagiarized_files):
             print(f"Skipping {non_plagiarized_files} as it is not a directory")
             continue
 
         if len(os.listdir(non_plagiarized_files)) > 1:
             print(
-                f"More than one non-plagiarized file in {non_plagiarized_files}. Expected only one")
+                f"More than one non-plagiarized file in {non_plagiarized_files}. Expected only one"
+            )
             continue
 
         non_plagiarized_file = os.listdir(non_plagiarized_files)[0]
         non_plagiarized_file_path = os.path.join(
-            non_plagiarized_files, non_plagiarized_file)
+            non_plagiarized_files, non_plagiarized_file
+        )
         if not os.path.isfile(non_plagiarized_file_path):
-            print(
-                f"Non-plagiarized file {non_plagiarized_file_path} does not exist")
+            print(f"Non-plagiarized file {non_plagiarized_file_path} does not exist")
             continue
         non_plagiarized_file_paths.append(non_plagiarized_file_path)
 
     for non_plagiarized_file_path in non_plagiarized_file_paths:
         if not os.path.isfile(non_plagiarized_file_path):
-            print(
-                f"Non-plagiarized file {non_plagiarized_file_path} does not exist")
+            print(f"Non-plagiarized file {non_plagiarized_file_path} does not exist")
             continue
 
         # Copy the non-plagiarized file to the target directory
@@ -135,12 +133,10 @@ for dir_name in os.listdir(DATASET_PATH):
         shutil.copy(non_plagiarized_file_path, new_file_path)
 
         # Append the data to the DataFrame
-        data = data._append({
-            "id1": original_file_id,
-            "id2": curr_id,
-            "plagio": 0,
-            "caseId": case_id
-        }, ignore_index=True)
+        data = data._append(
+            {"id1": original_file_id, "id2": curr_id, "plagio": 0, "caseId": case_id},
+            ignore_index=True,
+        )
 
 # Save the DataFrame to a CSV file
-data.to_csv("ir_plag_labels.csv", index=False)
+data.to_csv("../labels/ir_plag_labels.csv", index=False)

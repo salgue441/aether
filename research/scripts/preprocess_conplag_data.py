@@ -1,8 +1,8 @@
 import os
 import shutil
 
-files_path = "./datasets/conplag"  # Path to the directory containing the files
-destination_path = "./datasets/conplag_preprocesed"
+files_path = "../datasets/conplag"  # Path to the directory containing the files
+destination_path = "../datasets/conplag_preprocessed"
 
 os.makedirs(destination_path, exist_ok=True)
 
