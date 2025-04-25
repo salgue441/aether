@@ -113,7 +113,6 @@ for dir_path in DATASET_PATH.iterdir():
 
         # Copy the non-plagiarized file to the target directory
         new_file_name = f"{curr_id}.{non_plagiarized_file_path.suffix.lstrip('.')}"
-        curr_id += 1
         new_file_path = TARGET_PATH / new_file_name
         new_file_path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy(non_plagiarized_file_path, new_file_path)
@@ -125,6 +124,8 @@ for dir_path in DATASET_PATH.iterdir():
             "plagio": 0,
             "caseId": case_id
         }, ignore_index=True)
+        
+        curr_id += 1
 
 # Save the DataFrame to a CSV file
 data.to_csv("../labels/ir_plag_labels.csv", index=False)
