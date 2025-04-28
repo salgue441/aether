@@ -1,0 +1,1990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ast>
+	<CompilationUnit>
+		<list>
+			<Import>
+				<str />
+				<bool />
+				<bool />
+			</Import>
+			<Import>
+				<str />
+				<bool />
+				<bool />
+			</Import>
+			<Import>
+				<str />
+				<bool />
+				<bool />
+			</Import>
+			<Import>
+				<str />
+				<bool />
+				<bool />
+			</Import>
+			<Import>
+				<str />
+				<bool />
+				<bool />
+			</Import>
+		</list>
+		<list>
+			<ClassDeclaration name="A">
+				<set />
+				<list />
+				<str />
+				<list>
+					<FieldDeclaration>
+						<set />
+						<list />
+						<ReferenceType name="List">
+							<str />
+							<list />
+							<list>
+								<TypeArgument>
+									<ReferenceType name="Integer">
+										<str />
+										<list />
+									</ReferenceType>
+								</TypeArgument>
+							</list>
+						</ReferenceType>
+						<list>
+							<VariableDeclarator name="adj">
+								<str />
+								<list />
+							</VariableDeclarator>
+						</list>
+					</FieldDeclaration>
+					<FieldDeclaration>
+						<set />
+						<list />
+						<ReferenceType name="ArrayList">
+							<str />
+							<list />
+							<list>
+								<TypeArgument>
+									<ReferenceType name="Integer">
+										<str />
+										<list />
+									</ReferenceType>
+								</TypeArgument>
+							</list>
+						</ReferenceType>
+						<list>
+							<VariableDeclarator name="temp">
+								<str />
+								<list />
+							</VariableDeclarator>
+						</list>
+					</FieldDeclaration>
+					<FieldDeclaration>
+						<set />
+						<list />
+						<BasicType name="int">
+							<str />
+							<list />
+						</BasicType>
+						<list>
+							<VariableDeclarator name="mod">
+								<str />
+								<list />
+								<BinaryOperation>
+									<str />
+									<Cast>
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<Literal value="1e9">
+											<list />
+											<list />
+											<list />
+											<str />
+										</Literal>
+									</Cast>
+									<Literal value="7">
+										<list />
+										<list />
+										<list />
+										<str />
+									</Literal>
+								</BinaryOperation>
+							</VariableDeclarator>
+						</list>
+					</FieldDeclaration>
+					<FieldDeclaration>
+						<set />
+						<list />
+						<BasicType name="boolean">
+							<str />
+							<list />
+						</BasicType>
+						<list>
+							<VariableDeclarator name="vis">
+								<str />
+								<list />
+								<ArrayCreator>
+									<list />
+									<list />
+									<list />
+									<BasicType name="boolean">
+										<str />
+									</BasicType>
+									<list>
+										<Cast>
+											<BasicType name="int">
+												<str />
+												<list />
+											</BasicType>
+											<Literal value="1e5">
+												<list />
+												<list />
+												<list />
+												<str />
+											</Literal>
+										</Cast>
+									</list>
+								</ArrayCreator>
+							</VariableDeclarator>
+						</list>
+					</FieldDeclaration>
+					<FieldDeclaration>
+						<set />
+						<list />
+						<ReferenceType name="List">
+							<str />
+							<list />
+							<list>
+								<TypeArgument>
+									<ReferenceType name="Integer">
+										<str />
+										<list />
+									</ReferenceType>
+								</TypeArgument>
+							</list>
+						</ReferenceType>
+						<list>
+							<VariableDeclarator name="l">
+								<str />
+								<list />
+								<ClassCreator>
+									<list />
+									<list />
+									<list />
+									<ReferenceType name="ArrayList">
+										<str />
+										<list />
+									</ReferenceType>
+									<list />
+								</ClassCreator>
+							</VariableDeclarator>
+						</list>
+					</FieldDeclaration>
+					<FieldDeclaration>
+						<set />
+						<list />
+						<ReferenceType name="Reader">
+							<str />
+							<list />
+						</ReferenceType>
+						<list>
+							<VariableDeclarator name="s">
+								<str />
+								<list />
+								<ClassCreator>
+									<list />
+									<list />
+									<list />
+									<ReferenceType name="Reader">
+										<str />
+									</ReferenceType>
+									<list />
+								</ClassCreator>
+							</VariableDeclarator>
+						</list>
+					</FieldDeclaration>
+					<MethodDeclaration name="main">
+						<set />
+						<list />
+						<str />
+						<list>
+							<FormalParameter name="args">
+								<set />
+								<list />
+								<ReferenceType name="String">
+									<str />
+									<list />
+								</ReferenceType>
+								<str />
+								<bool />
+							</FormalParameter>
+						</list>
+						<list>
+							<str />
+						</list>
+						<list>
+							<LocalVariableDeclaration>
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<list>
+									<VariableDeclarator name="t">
+										<str />
+										<list />
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list />
+											<str />
+										</MethodInvocation>
+									</VariableDeclarator>
+								</list>
+							</LocalVariableDeclaration>
+							<WhileStatement>
+								<BinaryOperation>
+									<str />
+									<MemberReference>
+										<list />
+										<list>
+											<str />
+										</list>
+										<str />
+										<list />
+										<str />
+									</MemberReference>
+									<Literal value="0">
+										<list />
+										<list />
+										<list />
+										<str />
+									</Literal>
+								</BinaryOperation>
+								<BlockStatement>
+									<list>
+										<LocalVariableDeclaration>
+											<set />
+											<list />
+											<BasicType name="int">
+												<str />
+												<list />
+											</BasicType>
+											<list>
+												<VariableDeclarator name="n">
+													<str />
+													<list />
+													<MethodInvocation>
+														<list />
+														<list />
+														<str />
+														<list />
+														<list />
+														<str />
+													</MethodInvocation>
+												</VariableDeclarator>
+											</list>
+										</LocalVariableDeclaration>
+										<LocalVariableDeclaration>
+											<set />
+											<list />
+											<BasicType name="int">
+												<str />
+												<list />
+											</BasicType>
+											<list>
+												<VariableDeclarator name="m">
+													<str />
+													<list />
+													<MethodInvocation>
+														<list />
+														<list />
+														<str />
+														<list />
+														<list />
+														<str />
+													</MethodInvocation>
+												</VariableDeclarator>
+											</list>
+										</LocalVariableDeclaration>
+										<LocalVariableDeclaration>
+											<set />
+											<list />
+											<BasicType name="int">
+												<str />
+												<list />
+											</BasicType>
+											<list>
+												<VariableDeclarator name="d">
+													<str />
+													<list />
+													<MethodInvocation>
+														<list />
+														<list />
+														<str />
+														<list />
+														<list />
+														<str />
+													</MethodInvocation>
+												</VariableDeclarator>
+											</list>
+										</LocalVariableDeclaration>
+										<StatementExpression>
+											<MethodInvocation>
+												<list />
+												<list />
+												<str />
+												<list />
+												<list>
+													<Literal value="&quot;YES&quot;">
+														<list />
+														<list />
+														<list />
+														<str />
+													</Literal>
+												</list>
+												<str />
+											</MethodInvocation>
+										</StatementExpression>
+										<LocalVariableDeclaration>
+											<set />
+											<list />
+											<ReferenceType name="PriorityQueue">
+												<str />
+												<list />
+												<list>
+													<TypeArgument>
+														<ReferenceType name="Pair">
+															<str />
+															<list />
+														</ReferenceType>
+													</TypeArgument>
+												</list>
+											</ReferenceType>
+											<list>
+												<VariableDeclarator name="pq">
+													<str />
+													<list />
+													<ClassCreator>
+														<list />
+														<list />
+														<list />
+														<ReferenceType name="PriorityQueue">
+															<str />
+															<list />
+														</ReferenceType>
+														<list />
+													</ClassCreator>
+												</VariableDeclarator>
+											</list>
+										</LocalVariableDeclaration>
+										<ForStatement>
+											<ForControl>
+												<VariableDeclaration>
+													<set />
+													<list />
+													<BasicType name="int">
+														<str />
+														<list />
+													</BasicType>
+													<list>
+														<VariableDeclarator name="i">
+															<str />
+															<Literal value="1">
+																<list />
+																<list />
+																<list />
+																<str />
+															</Literal>
+														</VariableDeclarator>
+													</list>
+												</VariableDeclaration>
+												<BinaryOperation>
+													<str />
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</BinaryOperation>
+												<list>
+													<MemberReference>
+														<list />
+														<list>
+															<str />
+														</list>
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</list>
+											</ForControl>
+											<BlockStatement>
+												<list>
+													<StatementExpression>
+														<MethodInvocation>
+															<list />
+															<list />
+															<str />
+															<list />
+															<list>
+																<ClassCreator>
+																	<list />
+																	<list />
+																	<list />
+																	<ReferenceType name="Pair">
+																		<str />
+																	</ReferenceType>
+																	<list>
+																		<MemberReference>
+																			<list />
+																			<list />
+																			<str />
+																			<list />
+																			<str />
+																		</MemberReference>
+																	</list>
+																</ClassCreator>
+															</list>
+															<str />
+														</MethodInvocation>
+													</StatementExpression>
+												</list>
+											</BlockStatement>
+										</ForStatement>
+										<ForStatement>
+											<ForControl>
+												<VariableDeclaration>
+													<set />
+													<list />
+													<BasicType name="int">
+														<str />
+														<list />
+													</BasicType>
+													<list>
+														<VariableDeclarator name="i">
+															<str />
+															<Literal value="0">
+																<list />
+																<list />
+																<list />
+																<str />
+															</Literal>
+														</VariableDeclarator>
+													</list>
+												</VariableDeclaration>
+												<BinaryOperation>
+													<str />
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</BinaryOperation>
+												<list>
+													<MemberReference>
+														<list />
+														<list>
+															<str />
+														</list>
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</list>
+											</ForControl>
+											<BlockStatement>
+												<list>
+													<LocalVariableDeclaration>
+														<set />
+														<list />
+														<BasicType name="int">
+															<str />
+															<list />
+														</BasicType>
+														<list>
+															<VariableDeclarator name="v">
+																<str />
+																<list />
+																<MethodInvocation>
+																	<list />
+																	<list />
+																	<str />
+																	<list />
+																	<list />
+																	<str />
+																</MethodInvocation>
+															</VariableDeclarator>
+														</list>
+													</LocalVariableDeclaration>
+													<LocalVariableDeclaration>
+														<set />
+														<list />
+														<ReferenceType name="Pair">
+															<str />
+															<list />
+														</ReferenceType>
+														<list>
+															<VariableDeclarator name="p">
+																<str />
+																<list />
+																<MethodInvocation>
+																	<list />
+																	<list />
+																	<str />
+																	<list />
+																	<list />
+																	<str />
+																</MethodInvocation>
+															</VariableDeclarator>
+														</list>
+													</LocalVariableDeclaration>
+													<StatementExpression>
+														<Assignment value="MemberReference(member=v, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])">
+															<MemberReference>
+																<list />
+																<list />
+																<str />
+																<list />
+																<str />
+															</MemberReference>
+															<MemberReference>
+																<list />
+																<list />
+																<str />
+																<list />
+																<str />
+															</MemberReference>
+															<str />
+														</Assignment>
+													</StatementExpression>
+													<StatementExpression>
+														<MethodInvocation>
+															<list />
+															<list />
+															<str />
+															<list />
+															<list>
+																<MemberReference>
+																	<list />
+																	<list />
+																	<str />
+																	<list />
+																	<str />
+																</MemberReference>
+															</list>
+															<str />
+														</MethodInvocation>
+													</StatementExpression>
+													<StatementExpression>
+														<MethodInvocation>
+															<list />
+															<list />
+															<str />
+															<list />
+															<list>
+																<BinaryOperation>
+																	<str />
+																	<MemberReference>
+																		<list />
+																		<list />
+																		<str />
+																		<list />
+																		<str />
+																	</MemberReference>
+																	<Literal value="&quot; &quot;">
+																		<list />
+																		<list />
+																		<list />
+																		<str />
+																	</Literal>
+																</BinaryOperation>
+															</list>
+															<str />
+														</MethodInvocation>
+													</StatementExpression>
+												</list>
+											</BlockStatement>
+										</ForStatement>
+										<StatementExpression>
+											<MethodInvocation>
+												<list />
+												<list />
+												<str />
+												<list />
+												<list />
+												<str />
+											</MethodInvocation>
+										</StatementExpression>
+									</list>
+								</BlockStatement>
+							</WhileStatement>
+						</list>
+					</MethodDeclaration>
+					<ClassDeclaration name="Pair">
+						<set />
+						<list />
+						<str />
+						<list>
+							<FieldDeclaration>
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<list>
+									<VariableDeclarator name="id">
+										<str />
+										<list />
+									</VariableDeclarator>
+								</list>
+							</FieldDeclaration>
+							<FieldDeclaration>
+								<set />
+								<list />
+								<BasicType name="long">
+									<str />
+									<list />
+								</BasicType>
+								<list>
+									<VariableDeclarator name="sum">
+										<str />
+										<list />
+										<Literal value="0">
+											<list />
+											<list />
+											<list />
+											<str />
+										</Literal>
+									</VariableDeclarator>
+								</list>
+							</FieldDeclaration>
+							<ConstructorDeclaration name="Pair">
+								<set />
+								<list />
+								<str />
+								<list>
+									<FormalParameter name="id">
+										<set />
+										<list />
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<str />
+										<bool />
+									</FormalParameter>
+								</list>
+								<list>
+									<StatementExpression>
+										<Assignment value="MemberReference(member=id, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])">
+											<This>
+												<list />
+												<list />
+												<list>
+													<MemberReference>
+														<str />
+													</MemberReference>
+												</list>
+											</This>
+											<MemberReference>
+												<list />
+												<list />
+												<str />
+												<list />
+												<str />
+											</MemberReference>
+											<str />
+										</Assignment>
+									</StatementExpression>
+								</list>
+							</ConstructorDeclaration>
+							<MethodDeclaration name="compareTo">
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<list>
+									<FormalParameter name="o">
+										<set />
+										<list />
+										<ReferenceType name="Pair">
+											<str />
+											<list />
+										</ReferenceType>
+										<str />
+										<bool />
+									</FormalParameter>
+								</list>
+								<list>
+									<ReturnStatement>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+											</list>
+											<str />
+										</MethodInvocation>
+									</ReturnStatement>
+								</list>
+							</MethodDeclaration>
+						</list>
+						<list>
+							<ReferenceType name="Comparable">
+								<str />
+								<list />
+								<list>
+									<TypeArgument>
+										<ReferenceType name="Pair">
+											<str />
+											<list />
+										</ReferenceType>
+									</TypeArgument>
+								</list>
+							</ReferenceType>
+						</list>
+					</ClassDeclaration>
+					<MethodDeclaration name="dfs">
+						<set />
+						<list />
+						<str />
+						<list>
+							<FormalParameter name="i">
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+						</list>
+						<list>
+							<StatementExpression>
+								<Assignment value="Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true)">
+									<MemberReference>
+										<list />
+										<list />
+										<str />
+										<list>
+											<ArraySelector>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+											</ArraySelector>
+										</list>
+										<str />
+									</MemberReference>
+									<Literal value="true">
+										<list />
+										<list />
+										<list />
+										<str />
+									</Literal>
+									<str />
+								</Assignment>
+							</StatementExpression>
+							<StatementExpression>
+								<MethodInvocation>
+									<list />
+									<list />
+									<str />
+									<list />
+									<list>
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</list>
+									<str />
+								</MethodInvocation>
+							</StatementExpression>
+							<LocalVariableDeclaration>
+								<set />
+								<list />
+								<ReferenceType name="List">
+									<str />
+									<list />
+									<list>
+										<TypeArgument>
+											<ReferenceType name="Integer">
+												<str />
+												<list />
+											</ReferenceType>
+										</TypeArgument>
+									</list>
+								</ReferenceType>
+								<list>
+									<VariableDeclarator name="Y">
+										<str />
+										<list />
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list>
+												<ArraySelector>
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</ArraySelector>
+											</list>
+											<str />
+										</MemberReference>
+									</VariableDeclarator>
+								</list>
+							</LocalVariableDeclaration>
+							<ForStatement>
+								<EnhancedForControl>
+									<VariableDeclaration>
+										<set />
+										<list />
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<list>
+											<VariableDeclarator name="x">
+												<str />
+											</VariableDeclarator>
+										</list>
+									</VariableDeclaration>
+									<MemberReference>
+										<list />
+										<list />
+										<str />
+										<list />
+										<str />
+									</MemberReference>
+								</EnhancedForControl>
+								<BlockStatement>
+									<list>
+										<IfStatement>
+											<MemberReference>
+												<list>
+													<str />
+												</list>
+												<list />
+												<str />
+												<list>
+													<ArraySelector>
+														<MemberReference>
+															<list />
+															<list />
+															<str />
+															<list />
+															<str />
+														</MemberReference>
+													</ArraySelector>
+												</list>
+												<str />
+											</MemberReference>
+											<StatementExpression>
+												<MethodInvocation>
+													<list />
+													<list />
+													<str />
+													<list />
+													<list>
+														<MemberReference>
+															<list />
+															<list />
+															<str />
+															<list />
+															<str />
+														</MemberReference>
+													</list>
+													<str />
+												</MethodInvocation>
+											</StatementExpression>
+										</IfStatement>
+									</list>
+								</BlockStatement>
+							</ForStatement>
+						</list>
+					</MethodDeclaration>
+					<MethodDeclaration name="gcd">
+						<set />
+						<list />
+						<BasicType name="long">
+							<str />
+							<list />
+						</BasicType>
+						<str />
+						<list>
+							<FormalParameter name="a">
+								<set />
+								<list />
+								<BasicType name="long">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+							<FormalParameter name="b">
+								<set />
+								<list />
+								<BasicType name="long">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+						</list>
+						<list>
+							<str />
+						</list>
+						<list>
+							<ReturnStatement>
+								<TernaryExpression>
+									<BinaryOperation>
+										<str />
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+										<Literal value="0">
+											<list />
+											<list />
+											<list />
+											<str />
+										</Literal>
+									</BinaryOperation>
+									<MemberReference>
+										<list />
+										<list />
+										<str />
+										<list />
+										<str />
+									</MemberReference>
+									<MethodInvocation>
+										<list />
+										<list />
+										<str />
+										<list />
+										<list>
+											<MemberReference>
+												<list />
+												<list />
+												<str />
+												<list />
+												<str />
+											</MemberReference>
+											<BinaryOperation>
+												<str />
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+											</BinaryOperation>
+										</list>
+										<str />
+									</MethodInvocation>
+								</TernaryExpression>
+							</ReturnStatement>
+						</list>
+					</MethodDeclaration>
+					<MethodDeclaration name="gcd">
+						<set />
+						<list />
+						<BasicType name="int">
+							<str />
+							<list />
+						</BasicType>
+						<str />
+						<list>
+							<FormalParameter name="a">
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+							<FormalParameter name="b">
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+						</list>
+						<list>
+							<str />
+						</list>
+						<list>
+							<ReturnStatement>
+								<TernaryExpression>
+									<BinaryOperation>
+										<str />
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+										<Literal value="0">
+											<list />
+											<list />
+											<list />
+											<str />
+										</Literal>
+									</BinaryOperation>
+									<MemberReference>
+										<list />
+										<list />
+										<str />
+										<list />
+										<str />
+									</MemberReference>
+									<MethodInvocation>
+										<list />
+										<list />
+										<str />
+										<list />
+										<list>
+											<MemberReference>
+												<list />
+												<list />
+												<str />
+												<list />
+												<str />
+											</MemberReference>
+											<BinaryOperation>
+												<str />
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+											</BinaryOperation>
+										</list>
+										<str />
+									</MethodInvocation>
+								</TernaryExpression>
+							</ReturnStatement>
+						</list>
+					</MethodDeclaration>
+					<MethodDeclaration name="sortr">
+						<set />
+						<list />
+						<str />
+						<list>
+							<FormalParameter name="a">
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+						</list>
+						<list>
+							<LocalVariableDeclaration>
+								<set />
+								<list />
+								<ReferenceType name="ArrayList">
+									<str />
+									<list />
+									<list>
+										<TypeArgument>
+											<ReferenceType name="Integer">
+												<str />
+												<list />
+											</ReferenceType>
+										</TypeArgument>
+									</list>
+								</ReferenceType>
+								<list>
+									<VariableDeclarator name="l">
+										<str />
+										<list />
+										<ClassCreator>
+											<list />
+											<list />
+											<list />
+											<ReferenceType name="ArrayList">
+												<str />
+												<list />
+											</ReferenceType>
+											<list />
+										</ClassCreator>
+									</VariableDeclarator>
+								</list>
+							</LocalVariableDeclaration>
+							<ForStatement>
+								<EnhancedForControl>
+									<VariableDeclaration>
+										<set />
+										<list />
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<list>
+											<VariableDeclarator name="i">
+												<str />
+											</VariableDeclarator>
+										</list>
+									</VariableDeclaration>
+									<MemberReference>
+										<list />
+										<list />
+										<str />
+										<list />
+										<str />
+									</MemberReference>
+								</EnhancedForControl>
+								<StatementExpression>
+									<MethodInvocation>
+										<list />
+										<list />
+										<str />
+										<list />
+										<list>
+											<MemberReference>
+												<list />
+												<list />
+												<str />
+												<list />
+												<str />
+											</MemberReference>
+										</list>
+										<str />
+									</MethodInvocation>
+								</StatementExpression>
+							</ForStatement>
+							<StatementExpression>
+								<MethodInvocation>
+									<list />
+									<list />
+									<str />
+									<list />
+									<list>
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list />
+											<str />
+										</MethodInvocation>
+									</list>
+									<str />
+								</MethodInvocation>
+							</StatementExpression>
+							<ForStatement>
+								<ForControl>
+									<VariableDeclaration>
+										<set />
+										<list />
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<list>
+											<VariableDeclarator name="i">
+												<str />
+												<Literal value="0">
+													<list />
+													<list />
+													<list />
+													<str />
+												</Literal>
+											</VariableDeclarator>
+										</list>
+									</VariableDeclaration>
+									<BinaryOperation>
+										<str />
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</BinaryOperation>
+									<list>
+										<MemberReference>
+											<list />
+											<list>
+												<str />
+											</list>
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</list>
+								</ForControl>
+								<StatementExpression>
+									<Assignment value="MethodInvocation(arguments=[MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=get, postfix_operators=[], prefix_operators=[], qualifier=l, selectors=[], type_arguments=None)">
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list>
+												<ArraySelector>
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</ArraySelector>
+											</list>
+											<str />
+										</MemberReference>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+											</list>
+											<str />
+										</MethodInvocation>
+										<str />
+									</Assignment>
+								</StatementExpression>
+							</ForStatement>
+						</list>
+					</MethodDeclaration>
+					<MethodDeclaration name="sort">
+						<set />
+						<list />
+						<str />
+						<list>
+							<FormalParameter name="a">
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+						</list>
+						<list>
+							<LocalVariableDeclaration>
+								<set />
+								<list />
+								<ReferenceType name="ArrayList">
+									<str />
+									<list />
+									<list>
+										<TypeArgument>
+											<ReferenceType name="Integer">
+												<str />
+												<list />
+											</ReferenceType>
+										</TypeArgument>
+									</list>
+								</ReferenceType>
+								<list>
+									<VariableDeclarator name="l">
+										<str />
+										<list />
+										<ClassCreator>
+											<list />
+											<list />
+											<list />
+											<ReferenceType name="ArrayList">
+												<str />
+												<list />
+											</ReferenceType>
+											<list />
+										</ClassCreator>
+									</VariableDeclarator>
+								</list>
+							</LocalVariableDeclaration>
+							<ForStatement>
+								<EnhancedForControl>
+									<VariableDeclaration>
+										<set />
+										<list />
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<list>
+											<VariableDeclarator name="i">
+												<str />
+											</VariableDeclarator>
+										</list>
+									</VariableDeclaration>
+									<MemberReference>
+										<list />
+										<list />
+										<str />
+										<list />
+										<str />
+									</MemberReference>
+								</EnhancedForControl>
+								<StatementExpression>
+									<MethodInvocation>
+										<list />
+										<list />
+										<str />
+										<list />
+										<list>
+											<MemberReference>
+												<list />
+												<list />
+												<str />
+												<list />
+												<str />
+											</MemberReference>
+										</list>
+										<str />
+									</MethodInvocation>
+								</StatementExpression>
+							</ForStatement>
+							<StatementExpression>
+								<MethodInvocation>
+									<list />
+									<list />
+									<str />
+									<list />
+									<list>
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</list>
+									<str />
+								</MethodInvocation>
+							</StatementExpression>
+							<ForStatement>
+								<ForControl>
+									<VariableDeclaration>
+										<set />
+										<list />
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<list>
+											<VariableDeclarator name="i">
+												<str />
+												<Literal value="0">
+													<list />
+													<list />
+													<list />
+													<str />
+												</Literal>
+											</VariableDeclarator>
+										</list>
+									</VariableDeclaration>
+									<BinaryOperation>
+										<str />
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</BinaryOperation>
+									<list>
+										<MemberReference>
+											<list />
+											<list>
+												<str />
+											</list>
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</list>
+								</ForControl>
+								<StatementExpression>
+									<Assignment value="MethodInvocation(arguments=[MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=get, postfix_operators=[], prefix_operators=[], qualifier=l, selectors=[], type_arguments=None)">
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list>
+												<ArraySelector>
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</ArraySelector>
+											</list>
+											<str />
+										</MemberReference>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+											</list>
+											<str />
+										</MethodInvocation>
+										<str />
+									</Assignment>
+								</StatementExpression>
+							</ForStatement>
+						</list>
+					</MethodDeclaration>
+					<MethodDeclaration name="sort">
+						<set />
+						<list />
+						<str />
+						<list>
+							<FormalParameter name="a">
+								<set />
+								<list />
+								<BasicType name="long">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<bool />
+							</FormalParameter>
+						</list>
+						<list>
+							<LocalVariableDeclaration>
+								<set />
+								<list />
+								<ReferenceType name="ArrayList">
+									<str />
+									<list />
+									<list>
+										<TypeArgument>
+											<ReferenceType name="Long">
+												<str />
+												<list />
+											</ReferenceType>
+										</TypeArgument>
+									</list>
+								</ReferenceType>
+								<list>
+									<VariableDeclarator name="l">
+										<str />
+										<list />
+										<ClassCreator>
+											<list />
+											<list />
+											<list />
+											<ReferenceType name="ArrayList">
+												<str />
+												<list />
+											</ReferenceType>
+											<list />
+										</ClassCreator>
+									</VariableDeclarator>
+								</list>
+							</LocalVariableDeclaration>
+							<ForStatement>
+								<EnhancedForControl>
+									<VariableDeclaration>
+										<set />
+										<list />
+										<BasicType name="long">
+											<str />
+											<list />
+										</BasicType>
+										<list>
+											<VariableDeclarator name="i">
+												<str />
+											</VariableDeclarator>
+										</list>
+									</VariableDeclaration>
+									<MemberReference>
+										<list />
+										<list />
+										<str />
+										<list />
+										<str />
+									</MemberReference>
+								</EnhancedForControl>
+								<StatementExpression>
+									<MethodInvocation>
+										<list />
+										<list />
+										<str />
+										<list />
+										<list>
+											<MemberReference>
+												<list />
+												<list />
+												<str />
+												<list />
+												<str />
+											</MemberReference>
+										</list>
+										<str />
+									</MethodInvocation>
+								</StatementExpression>
+							</ForStatement>
+							<StatementExpression>
+								<MethodInvocation>
+									<list />
+									<list />
+									<str />
+									<list />
+									<list>
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</list>
+									<str />
+								</MethodInvocation>
+							</StatementExpression>
+							<ForStatement>
+								<ForControl>
+									<VariableDeclaration>
+										<set />
+										<list />
+										<BasicType name="int">
+											<str />
+											<list />
+										</BasicType>
+										<list>
+											<VariableDeclarator name="i">
+												<str />
+												<Literal value="0">
+													<list />
+													<list />
+													<list />
+													<str />
+												</Literal>
+											</VariableDeclarator>
+										</list>
+									</VariableDeclaration>
+									<BinaryOperation>
+										<str />
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</BinaryOperation>
+									<list>
+										<MemberReference>
+											<list />
+											<list>
+												<str />
+											</list>
+											<str />
+											<list />
+											<str />
+										</MemberReference>
+									</list>
+								</ForControl>
+								<StatementExpression>
+									<Assignment value="MethodInvocation(arguments=[MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=get, postfix_operators=[], prefix_operators=[], qualifier=l, selectors=[], type_arguments=None)">
+										<MemberReference>
+											<list />
+											<list />
+											<str />
+											<list>
+												<ArraySelector>
+													<MemberReference>
+														<list />
+														<list />
+														<str />
+														<list />
+														<str />
+													</MemberReference>
+												</ArraySelector>
+											</list>
+											<str />
+										</MemberReference>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list>
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+											</list>
+											<str />
+										</MethodInvocation>
+										<str />
+									</Assignment>
+								</StatementExpression>
+							</ForStatement>
+						</list>
+					</MethodDeclaration>
+					<ClassDeclaration name="Reader">
+						<set />
+						<list />
+						<str />
+						<list>
+							<FieldDeclaration>
+								<set />
+								<list />
+								<ReferenceType name="BufferedReader">
+									<str />
+									<list />
+								</ReferenceType>
+								<list>
+									<VariableDeclarator name="in">
+										<str />
+										<list />
+										<ClassCreator>
+											<list />
+											<list />
+											<list />
+											<ReferenceType name="BufferedReader">
+												<str />
+											</ReferenceType>
+											<list>
+												<ClassCreator>
+													<list />
+													<list />
+													<list />
+													<ReferenceType name="InputStreamReader">
+														<str />
+													</ReferenceType>
+													<list>
+														<MemberReference>
+															<list />
+															<list />
+															<str />
+															<list />
+															<str />
+														</MemberReference>
+													</list>
+												</ClassCreator>
+											</list>
+										</ClassCreator>
+									</VariableDeclarator>
+								</list>
+							</FieldDeclaration>
+							<FieldDeclaration>
+								<set />
+								<list />
+								<ReferenceType name="StringTokenizer">
+									<str />
+									<list />
+								</ReferenceType>
+								<list>
+									<VariableDeclarator name="st">
+										<str />
+										<list />
+									</VariableDeclarator>
+								</list>
+							</FieldDeclaration>
+							<MethodDeclaration name="next">
+								<set />
+								<list />
+								<ReferenceType name="String">
+									<str />
+									<list />
+								</ReferenceType>
+								<str />
+								<list />
+								<list>
+									<WhileStatement>
+										<BinaryOperation>
+											<str />
+											<BinaryOperation>
+												<str />
+												<MemberReference>
+													<list />
+													<list />
+													<str />
+													<list />
+													<str />
+												</MemberReference>
+												<Literal value="null">
+													<list />
+													<list />
+													<list />
+													<str />
+												</Literal>
+											</BinaryOperation>
+											<MethodInvocation>
+												<list>
+													<str />
+												</list>
+												<list />
+												<str />
+												<list />
+												<list />
+												<str />
+											</MethodInvocation>
+										</BinaryOperation>
+										<BlockStatement>
+											<list>
+												<TryStatement>
+													<list>
+														<StatementExpression>
+															<Assignment value="ClassCreator(arguments=[MethodInvocation(arguments=[], member=readLine, postfix_operators=[], prefix_operators=[], qualifier=in, selectors=[], type_arguments=None)], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=StringTokenizer, sub_type=None))">
+																<MemberReference>
+																	<list />
+																	<list />
+																	<str />
+																	<list />
+																	<str />
+																</MemberReference>
+																<ClassCreator>
+																	<list />
+																	<list />
+																	<list />
+																	<ReferenceType name="StringTokenizer">
+																		<str />
+																	</ReferenceType>
+																	<list>
+																		<MethodInvocation>
+																			<list />
+																			<list />
+																			<str />
+																			<list />
+																			<list />
+																			<str />
+																		</MethodInvocation>
+																	</list>
+																</ClassCreator>
+																<str />
+															</Assignment>
+														</StatementExpression>
+													</list>
+													<list>
+														<CatchClause>
+															<CatchClauseParameter name="e">
+																<list>
+																	<str />
+																</list>
+																<str />
+															</CatchClauseParameter>
+															<list />
+														</CatchClause>
+													</list>
+												</TryStatement>
+											</list>
+										</BlockStatement>
+									</WhileStatement>
+									<ReturnStatement>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list />
+											<str />
+										</MethodInvocation>
+									</ReturnStatement>
+								</list>
+							</MethodDeclaration>
+							<MethodDeclaration name="nextInt">
+								<set />
+								<list />
+								<BasicType name="int">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<list />
+								<list>
+									<ReturnStatement>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list>
+												<MethodInvocation>
+													<list />
+													<list />
+													<str />
+													<list />
+													<list />
+													<str />
+												</MethodInvocation>
+											</list>
+											<str />
+										</MethodInvocation>
+									</ReturnStatement>
+								</list>
+							</MethodDeclaration>
+							<MethodDeclaration name="nextLong">
+								<set />
+								<list />
+								<BasicType name="long">
+									<str />
+									<list />
+								</BasicType>
+								<str />
+								<list />
+								<list>
+									<ReturnStatement>
+										<MethodInvocation>
+											<list />
+											<list />
+											<str />
+											<list />
+											<list>
+												<MethodInvocation>
+													<list />
+													<list />
+													<str />
+													<list />
+													<list />
+													<str />
+												</MethodInvocation>
+											</list>
+											<str />
+										</MethodInvocation>
+									</ReturnStatement>
+								</list>
+							</MethodDeclaration>
+						</list>
+					</ClassDeclaration>
+				</list>
+			</ClassDeclaration>
+		</list>
+	</CompilationUnit>
+</ast>
